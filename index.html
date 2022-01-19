@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <script src="https://kit.fontawesome.com/70c747980a.js" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"/>
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsiveInicio.css">
+    <title>Ecopuntos</title>
+</head>
+<body>
+    <header class="header">
+        <div class="logo-content">
+            <a href="index.html" class="logo">Ecopuntos</a>
+            <p>Recicla y dona en CABA</p>
+        </div>
+        <nav class="menu">
+            <ul>
+                <li><a href="index.html" class="menu-item">Inicio</a></li>
+                <li><a href="nosotros.html" class="menu-item">Nosotros</a></li>
+                <li><a href="https://cafecito.app/ecopuntos" target="_blank" class="menu-donate">Donar</a></li>
+            </ul>
+        </nav>
+        <nav class="menu-mobile">
+            <button id="btn">
+                <i class="fas fa-bars"></i>
+            </button>
+            <ul id="menu-mobile">
+                <li><a href="index.html" class="menu-item">Inicio</a></li>
+                <li><a href="nosotros.html" class="menu-item">Nosotros</a></li>
+                <li><a href="https://cafecito.app/ecopuntos" target="_blank" class="menu-donate-mobile">Donar</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section>
+            <div class="content-search">
+                <!-- BUSCADOR -->
+                <div class="search">
+                    <input type="text" placeholder="Buscar plaza" id="formulario">
+                    <button id="boton">
+                        <i class="fas fa-search"></i>
+                    </button>
+                </div>
+                <!-- SUGERENCIAS -->
+                <div class="sugerencias">
+                    <ul id="resultado"></ul>
+                </div>
+            </div>
+            <div class="recyclable">
+                <!-- PUNTOS -->
+                <div class="material puntos" id="puntoss">
+                    <h2>Mostrar todos los puntos</h2>
+                </div>
+                <!-- PLASTICO -->
+                <div class="material plastic" id="plastic">               
+                    <img src="images/botella-de-plastico.png" alt="Botella de plastico">
+                    <h2>Plastico</h2>
+                </div>
+                <!-- VIDRIO -->
+                <div class="material vidrio" id="vidrio">
+                    <img src="images/lentes.png" alt="Botella de plastico">
+                    <h2>Vidrio</h2>
+                </div>
+                <!-- PAPEL Y CARTON -->
+                <div class="material paper" id="paper">
+                    <img src="images/papel.png" alt="Botella de plastico">
+                    <h2>Papel y Carton</h2>
+                </div>
+                <!-- ELECTRONICOS -->
+                <div class="material electronicos" id="electronicos">
+                    <img src="images/Computadora.png" alt="Botella de plastico">
+                    <h2>Electronicos</h2>
+                </div>
+            </div>
+        </section>
+        <section id="map" class="map"></section>
+    </main>
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+
+    <script src="js/comunas.js"></script>
+    <script src="js/puntos-verdes.js"></script>
+    <script src="js/plastic.js"></script>
+    <script src="js/glass.js"></script>
+    <script src="js/paper.js"></script>
+    <script src="js/data.js"></script>
+    <script src="js/coords.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>
